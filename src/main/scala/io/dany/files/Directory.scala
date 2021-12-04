@@ -1,5 +1,7 @@
 package io.dany.files
 
+import io.dany.filesystem.FilesystemException
+
 import scala.annotation.tailrec
 
 class Directory(override val parentPath: String, override val name: String, val contents: List[DirEntry])
@@ -43,6 +45,8 @@ class Directory(override val parentPath: String, override val name: String, val 
   }
 
   override def asDirectory: Directory = this
+
+  override def asFile: File = throw new FilesystemException("A directory cannot be converted to a file!")
 
   override def getType: String = Directory.TYPE
 }
