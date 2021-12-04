@@ -5,7 +5,7 @@ import io.dany.files.Directory
 class State(val root: Directory, val wd: Directory, val output: String) {
 
   def show(): Unit = {{
-    println(output)
+    if (output.nonEmpty) println(output)
     print(State.SHELL_TOKEN)
   }}
 

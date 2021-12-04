@@ -1,6 +1,7 @@
+
 # Basic File System
 
-Project to implement a basic filesystem using Scala (Course)
+Project to implement a basic filesystem using Scala (Rock the JVM Course)
 
 ## Requirements
 - Scala 2.13.7
